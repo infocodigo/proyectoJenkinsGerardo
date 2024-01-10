@@ -9,9 +9,7 @@ pipeline
                 } 
     
                 stage ('Build application') { 
-	         steps { 
-		    bat "mvn -f pom.xml clean install -Dmaven.test.skip=true" 
-                 }
+	         steps { bat "mvn -f pom.xml clean install -Dmaven.test.skip=true" }
                 } 
     
                 stage ('Pasamos a producción') {
